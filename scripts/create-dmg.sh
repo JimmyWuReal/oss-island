@@ -22,5 +22,9 @@ hdiutil create \
     -format UDZO \
     "$DMG"
 
-shasum -a 256 "$DMG" > "$DMG.sha256"
+DMG_NAME="$(basename "$DMG")"
+(
+    cd "$ROOT/dist"
+    shasum -a 256 "$DMG_NAME" > "$DMG_NAME.sha256"
+)
 echo "Created $DMG"
