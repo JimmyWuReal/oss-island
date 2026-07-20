@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Oss Island">
+  <rect width="128" height="128" rx="29" fill="#06161f"/>
+  <path d="M23 55c12 25 70 25 82 0-13 10-69 10-82 0Z" fill="#50e8b8"/>
+  <path d="M27 85c20-13 54 13 74 0M27 101c20-13 54 13 74 0" fill="none" stroke="#59b7f4" stroke-linecap="round" stroke-width="6"/>
+</svg>

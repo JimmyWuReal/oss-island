@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v6
+      - name: Core checks
+        run: swift run OssIslandCoreChecks
+      - name: Build app bundle
+        run: ./scripts/build-app.sh
+      - name: Validate app signature
+        run: codesign --verify --deep --strict "dist/Oss Island.app"
